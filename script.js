@@ -82,7 +82,9 @@ function computerMovement () {
 }
 
 function moveEverything() {
-    
+    if (showWinScreen) {
+        return;
+    }
     computerMovement();
 
     ballX += ballSpeedX;
@@ -131,7 +133,7 @@ function drawNet(){
 function drawEverything (){
     //background black
     colorRect(0, 0, canvas.width, canvas.height, 'black');
-
+    
     //Winner Screen
     if (showWinScreen) {
         canvasContext.fillStyle = 'white';
@@ -152,9 +154,11 @@ function drawEverything (){
     colorRect(canvas.width - paddleThickness-10, paddleTwoY, paddleThickness, paddleHeight, 'white');
     //ball
     colorCircle(ballX, ballY, 10,'red');
-
+    //score keeper
     canvasContext.fillText(playerOneScore, 100,100);
     canvasContext.fillText(playerTwoScore, canvas.width-100, 100);
+    canvasContext.fillText("Instructions:", 75, 540);
+    canvasContext.fillText("Move mouse to control left paddle", 75, 560)
 }
 
 //function to fill rectangles
