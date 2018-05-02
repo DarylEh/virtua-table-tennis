@@ -29,8 +29,9 @@ const ctx = canvas.getContext("2d");
 
 //Initiate Start Screen
 window.onload = function() {
+  colorRect(0, 0, canvas.width, canvas.height, "black");
   ctx.font = `48px "${fontName}"`;
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "white";
   ctx.fillText("Virtua Tennis", 100, 200);
   ctx.font = `36px "${fontName}"`;
   ctx.fillText("Press Enter", 225, 350);
