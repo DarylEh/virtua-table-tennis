@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* used to load font prior to canvas */
+#preloadfont {
+  font-family: "Press Start 2P";
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: inline-block;
 }
